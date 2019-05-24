@@ -15,8 +15,6 @@ namespace Tests
         public void Test1()
         {
             Assert.Pass();
-            Console.WriteLine("Test1");
-            TestContext.WriteLine("Test1");
         }
 
         [Test]
@@ -24,7 +22,16 @@ namespace Tests
         public void Test2()
         {
             Assert.Pass();
-            Console.WriteLine("Test2");
+        }
+
+
+        [Test]
+        [Category("cat1")]
+        [Category("cat2")]
+        [Category("cat3")]
+        public void Test3()
+        {
+            Assert.Pass();
         }
     }
 }
