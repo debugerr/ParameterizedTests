@@ -1,5 +1,7 @@
 using NUnit.Framework;
 using System;
+using System.Collections;
+using System.Text;
 
 namespace Tests
 {
@@ -41,7 +43,13 @@ namespace Tests
             var expected = "This is a test";
             var actual = Environment.GetEnvironmentVariable("Build.BuildNumber");
 
-            Assert.AreEqual(expected, actual);
+            StringBuilder sb = new StringBuilder();
+            foreach (DictionaryEntry kv in Environment.GetEnvironmentVariables())
+            {
+                sb.AppendLine($"{kv.Key}={kv.Value}::");
+            }
+
+            Assert.AreEqual(expected, sb);
         }
     }
 }
