@@ -26,6 +26,12 @@ namespace Tests
             Assert.Pass();
         }
 
+        [Test]
+        public void NoCat()
+        {
+            Assert.Pass();
+        }
+
 
         [Test]
         [Category("cat1")]
