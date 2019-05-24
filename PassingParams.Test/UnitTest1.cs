@@ -33,5 +33,14 @@ namespace Tests
         {
             Assert.Pass();
         }
+
+        [Test]
+        public void CanGetMyVariable()
+        {
+            var expected = "This is a test";
+            var actual = Environment.GetEnvironmentVariable("Build.BuildNumber");
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
