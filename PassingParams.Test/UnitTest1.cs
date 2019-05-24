@@ -35,6 +35,7 @@ namespace Tests
         }
 
         [Test]
+        [Category("All")]
         public void CanGetMyVariable()
         {
             var expected = "This is a test";
