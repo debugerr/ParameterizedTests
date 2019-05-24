@@ -16,6 +16,7 @@ namespace Tests
         {
             Assert.Pass();
             Console.WriteLine("Test1");
+            TestContext.WriteLine("Test1");
         }
 
         [Test]
